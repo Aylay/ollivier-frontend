@@ -1,9 +1,10 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  const { data: equipe } = await useFetch('https://admin.imagine2050.fr/api/equipe?populate=deep')
+  const dataEquipe = equipe._rawValue.data.attributes
+</script>
 
 <template>
   <div>
-    pwetdddf
+    {{ dataEquipe.bloc1Titre }}
   </div>
 </template>
-
-<style scoped></style>
