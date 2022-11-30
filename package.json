@@ -14,6 +14,7 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
+    "@gtm-support/vue-gtm": "^2.0.0",
     "@heroicons/vue": "^2.0.13",
     "highlight.js": "^11.7.0",
     "markdown-it": "^13.0.1",
