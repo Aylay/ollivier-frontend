@@ -7,3 +7,24 @@
     font-size: 10px;
   }
 }
+
+@layer components {
+  .olliver-content p {
+    @apply font-heebo text-[1.6rem] leading-[2.2rem] text-downriver;
+  }
+  .olliver-content h2 {
+    @apply font-heebo font-medium text-[2rem] leading-[2.4rem] text-downriver tracking-wider relative after:absolute after:content-[''] after:h-[.2rem] after:w-28 after:bottom-0 after:left-0 after:transform pb-6 mb-6 after:bg-science-blue;
+  }
+  .olliver-content h3 {
+    @apply font-heebo font-medium text-[1.8rem] leading-[2.2rem] text-downriver tracking-wider mb-4;
+  }
+  .olliver-content * + h2 {
+    @apply mt-16;
+  }
+  .olliver-content * + h3 {
+    @apply mt-8;
+  }
+  .olliver-content a {
+    @apply underline hover:no-underline;
+  }
+}

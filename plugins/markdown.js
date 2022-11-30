@@ -14,7 +14,7 @@ import container from 'markdown-it-container';
 
 const markdownit = new mdit({
     html:         true,
-    xhtmlOut:     false,
+    xhtmlOut:     true,
     breaks:       '\n',
     langPrefix:   'language-',
     linkify:      true,
