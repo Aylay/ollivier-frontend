@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { MapPinIcon, PhoneIcon, EnvelopeIcon, ClockIcon } from '@heroicons/vue/24/outline'
+
 const runtimeConfig = useRuntimeConfig()
-import type { Strapi4Response } from "@nuxtjs/strapi"
-const { find } = useStrapi4()
+const { find, create } = useStrapi4()
 const nuxtApp = useNuxtApp()
 
-const content = await find<Strapi4Response<Accueil>>("accueil", { populate: 'deep' });
+const content = await find<Accueil>("accueil", { populate: 'deep' });
 
 const home = content.data.attributes
 
@@ -22,18 +22,13 @@ async function addContact () {
   checkForm()
   if (!error.value) {
     messageDisplay.value = 'Votre message a bien été envoyé !'
-    await $fetch(runtimeConfig.public.apiBase + '/api/contacts', {
-      method: 'POST',
-      body: {
-        data: {
-          prenom: firstName.value,
-          nom: lastName.value,
-          email: email.value,
-          telephone: phone.value,
-          objet: subject.value,
-          message: message.value
-        }
-      }
+    await create<Contact>('contacts', {
+      prenom: firstName.value,
+      nom: lastName.value,
+      email: email.value,
+      telephone: phone.value,
+      objet: subject.value,
+      message: message.value
     })
   }
 }

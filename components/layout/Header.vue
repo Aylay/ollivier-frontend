@@ -2,10 +2,9 @@
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/outline'
 
 const runtimeConfig = useRuntimeConfig()
-import type { Strapi4Response } from "@nuxtjs/strapi"
 const { find } = useStrapi4()
 
-const layout = await find<Strapi4Response<Layout>>("layout", { populate: 'deep' });
+const layout = await find<Layout>("layout", { populate: 'deep' });
 const content = layout.data.attributes
 
 function displayTel (tel: { toString: () => string }) {

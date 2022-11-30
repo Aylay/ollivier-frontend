@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 const runtimeConfig = useRuntimeConfig()
-import type { Strapi4Response } from "@nuxtjs/strapi"
 const { find } = useStrapi4()
 
-const layout = await find<Strapi4Response<Layout>>("layout", { populate: 'deep' });
+const layout = await find<Layout>("layout", { populate: 'deep' });
 const content = layout.data.attributes
 
 </script>

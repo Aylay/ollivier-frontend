@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 const runtimeConfig = useRuntimeConfig()
-import type { Strapi4Response } from "@nuxtjs/strapi"
 const { find } = useStrapi4()
 const nuxtApp = useNuxtApp()
 
-const content = await find<Strapi4Response<Rgpd>>("rgpd", { populate: 'deep' });
+const content = await find<Rgpd>("rgpd", { populate: 'deep' });
 const legals = content.data.attributes
 </script>
 
