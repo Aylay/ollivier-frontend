@@ -54,12 +54,10 @@ function scrollToForm () {
         to="/"
         :title="content.logo.data.attributes.alternativeText"
       >
-        <nuxt-img
+        <img
           :src="runtimeConfig.public.apiBase + content.logo.data.attributes.url"
           :alt="content.logo.data.attributes.alternativeText"
           class="h-auto w-full max-w-sm"
-          loading="lazy"
-          format="webp"
         />
       </NuxtLink>
       <div

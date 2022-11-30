@@ -11,7 +11,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.STRAPI_URL
+      apiBase: process.env.STRAPI_URL,
+      siteUrl: process.env.SITE_URL
     }
   },
 
