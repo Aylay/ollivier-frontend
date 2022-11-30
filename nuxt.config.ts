@@ -39,5 +39,9 @@ export default defineNuxtConfig({
       Barlow: [700],
       Heebo: [400, 500]
     }
+  },
+  
+  build: {
+    transpile: ['@heroicons/vue']
   }
 })
