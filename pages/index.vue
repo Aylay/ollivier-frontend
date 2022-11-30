@@ -165,11 +165,10 @@ function scrollToForm () {
   <div>
     <div class="px-8 h-screen relative flex justify-center items-center">
       <div class="absolute w-full h-full inset-0 z-0">
-        <nuxt-img
+        <img
           :src="(runtimeConfig.public.apiBase + home.imageHeader.data.attributes.url)"
           :alt="home.imageHeader.data.attributes.alternativeText"
           class="h-full w-full object-cover"
-          loading="lazy"
         />
       </div>
       <div class="max-w-screen-xl w-full mx-auto flex flex-col relative z-10">
