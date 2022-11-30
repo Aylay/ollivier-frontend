@@ -170,7 +170,6 @@ function scrollToForm () {
           :alt="home.imageHeader.data.attributes.alternativeText"
           class="h-full w-full object-cover"
           loading="lazy"
-          format="webp"
         />
       </div>
       <div class="max-w-screen-xl w-full mx-auto flex flex-col relative z-10">
