@@ -28,7 +28,8 @@ export default defineNuxtConfig({
 
   image: {
     strapi: {
-      baseURL: process.env.STRAPI_URL + '/uploads/'
+      baseURL: process.env.STRAPI_URL + '/uploads/',
+      domains: [process.env.STRAPI_URL]
     }
   },
 
