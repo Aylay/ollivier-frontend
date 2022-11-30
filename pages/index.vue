@@ -5,7 +5,7 @@ const runtimeConfig = useRuntimeConfig()
 const { find, create } = useStrapi4()
 const nuxtApp = useNuxtApp()
 
-const content = await find<Accueil>("accueil", { populate: 'deep' });
+const content = await find<Accueil>("accueil", { populate: 'deep' })
 
 const home = content.data.attributes
 
@@ -53,6 +53,15 @@ function scrollToForm () {
   const contactDiv = document.getElementById("contact-us")
   contactDiv ? contactDiv.scrollIntoView({behavior: "smooth"}) : null;
 }
+
+useHead({
+  title: home.meta.title,
+  meta: [
+    { name: 'description', content: home.meta.description },
+    { property: 'og:description', content: home.meta.description },
+    { property: 'og:title', content: home.meta.title }
+  ]
+})
 </script>
 
 <template>
@@ -342,7 +351,7 @@ function scrollToForm () {
           @submit.prevent="addContact()"
           id="contact-us"
         >
-          <div class="flex gap-10 justify-between">
+          <div class="flex max-lg:flex-col gap-10 justify-between">
             <input
               type="text"
               class="flex-1 border-2 border-solid border-botticelli p-5 text-lynch font-heebo text-[1.6rem] leading-[2.2rem] tracking-wider"
@@ -356,7 +365,7 @@ function scrollToForm () {
               v-model="lastName"
             />
           </div>
-          <div class="flex gap-10 justify-between">
+          <div class="flex max-lg:flex-col gap-10 justify-between">
             <input
               type="email"
               class="flex-1 border-2 border-solid border-botticelli p-5 text-lynch font-heebo text-[1.6rem] leading-[2.2rem] tracking-wider"
@@ -397,7 +406,7 @@ function scrollToForm () {
           </p>
         </form>
       </div>
-      <div class="flex-1">
+      <div class="flex-1 max-lg:w-full">
         <div class="flex max-lg:flex-col gap-10 mb-24">
           <div class="flex-1">
             <h3 class="font-heebo font-medium text-[2rem] leading-[2.4rem] tracking-wide text-downriver relative after:absolute after:content-[''] after:h-[.2rem] after:w-28 after:bottom-0 after:left-0 after:transform pb-6 mb-6 after:bg-science-blue">

@@ -5,6 +5,15 @@ const nuxtApp = useNuxtApp()
 
 const content = await find<Rgpd>("rgpd", { populate: 'deep' });
 const legals = content.data.attributes
+
+useHead({
+  title: legals.meta.title,
+  meta: [
+    { name: 'description', content: legals.meta.description },
+    { property: 'og:description', content: legals.meta.description },
+    { property: 'og:title', content: legals.meta.title }
+  ]
+})
 </script>
 
 <template>
