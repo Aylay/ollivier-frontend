@@ -221,45 +221,33 @@ function scrollToForm () {
       <div class="flex-1 flex gap-12">
         <div class="flex-1 flex flex-col gap-12">
           <div class="w-full h-[28.5rem]">
-            <nuxt-img
+            <img
               :src="(runtimeConfig.public.apiBase + home.bloc1Images.data[0].attributes.url)"
               :alt="home.bloc1Images.data[0].attributes.alternativeText"
               class="w-full h-full object-cover"
-              loading="lazy"
-              format="webp"
-              provider="strapi"
             />
           </div>
           <div class="w-full h-[19rem]">
-            <nuxt-img
+            <img
               :src="(runtimeConfig.public.apiBase + home.bloc1Images.data[1].attributes.url)"
               :alt="home.bloc1Images.data[1].attributes.alternativeText"
               class="w-full h-full object-cover"
-              loading="lazy"
-              format="webp"
-              provider="strapi"
             />
           </div>
         </div>
         <div class="flex-1 flex flex-col gap-12">
           <div class="w-full h-[19rem] mt-20">
-            <nuxt-img
+            <img
               :src="(runtimeConfig.public.apiBase + home.bloc1Images.data[2].attributes.url)"
               :alt="home.bloc1Images.data[2].attributes.alternativeText"
               class="w-full h-full object-cover"
-              loading="lazy"
-              format="webp"
-              provider="strapi"
             />
           </div>
           <div class="w-full h-[34em]">
-            <nuxt-img
+            <img
               :src="(runtimeConfig.public.apiBase + home.bloc1Images.data[3].attributes.url)"
               :alt="home.bloc1Images.data[3].attributes.alternativeText"
               class="w-full h-full object-cover"
-              loading="lazy"
-              format="webp"
-              provider="strapi"
             />
           </div>
         </div>
@@ -280,11 +268,10 @@ function scrollToForm () {
             :key="i"
             class="flex-1"
           >
-            <nuxt-img
+            <img
               :src="(runtimeConfig.public.apiBase + prestation.image.data.attributes.url)"
               :alt="prestation.image.data.attributes.alternativeText"
               class="w-auto h-32 mx-auto"
-              provider="strapi"
             />
             <h3 class="mt-6 font-heebo font-medium text-[2rem] leading-[2.4rem] text-downriver tracking-wider text-center relative after:absolute after:content-[''] after:h-[.2rem] after:w-28 after:bottom-0 after:left-1/2 after:transform after:-translate-x-1/2 pb-6 mb-6 w-full after:bg-science-blue">
               {{ prestation.titre }}
@@ -299,12 +286,10 @@ function scrollToForm () {
 
     <div class="relative before:absolute before:w-full before:h-3 before:content-[''] before:top-0 before:left-0 before:bg-turbo after:absolute after:w-full after:h-3 after:content-[''] after:top-3 after:left-0 after:bg-cerise flex justify-center items-center lg:h-[32.5rem] max-lg:pt-28 max-lg:pb-20  px-8">
       <div class="w-full h-full absolute inset-0 top-6 z-0">
-        <nuxt-img
+        <img
           src="/bg-bleu.jpg"
           alt="background bleu"
           class="w-full h-full object-cover"
-          loading="lazy"
-          format="webp"
         />
       </div>
       <div class="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -313,12 +298,10 @@ function scrollToForm () {
           alt="Quote"
           class="max-w-[15.5rem] h-auto w-full mb-8 mx-auto"
         />
-        <nuxt-img
+        <img
           src="/signature-ollivier-bleu.png"
           alt="Signature Ollivier Conforti"
           class="max-w-[12.5rem] h-auto w-full mx-auto"
-          loading="lazy"
-          format="webp"
         />
       </div>
       <p class="max-w-[95rem] font-heebo font-medium text-white text-5xl leading-[3.6rem] tracking-wide relative z-20 text-center">
@@ -341,13 +324,10 @@ function scrollToForm () {
             class="flex-1"
           >
             <div class="w-full h-80 lg:h-[45rem]">
-              <nuxt-img
+              <img
                 :src="(runtimeConfig.public.apiBase + materiel.image.data.attributes.url)"
                 :alt="materiel.image.data.attributes.alternativeText"
                 class="w-full h-full object-cover"
-                loading="lazy"
-                format="webp"
-                provider="strapi"
               />
             </div>
             <h3 class="mt-6 font-heebo font-medium text-[2rem] leading-[2.4rem] text-downriver tracking-wider text-center relative after:absolute after:content-[''] after:h-[.2rem] after:w-28 after:bottom-0 after:left-1/2 after:transform after:-translate-x-1/2 px-4 pb-6 mb-6 w-full after:bg-science-blue">
@@ -445,13 +425,10 @@ function scrollToForm () {
             :key="i"
             class="flex-1"
           >
-            <nuxt-img
+            <img
               :src="(runtimeConfig.public.apiBase + partenaire.attributes.url)"
               :alt="partenaire.attributes.alternativeText"
               class="w-auto mx-auto filter grayscale max-lg:max-w-[20rem] max-h-24"
-              provider="strapi"
-              loading="lazy"
-              format="webp"
             />
           </div>
         </div>

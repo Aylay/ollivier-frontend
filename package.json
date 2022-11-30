@@ -8,7 +8,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/image-edge": "^1.0.0-27821548.ab054e4",
     "@nuxtjs/google-fonts": "^3.0.0-1",
     "@nuxtjs/strapi": "^1.6.3",
     "@nuxtjs/tailwindcss": "^6.1.3",

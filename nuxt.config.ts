@@ -26,13 +26,6 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/main.css',
   },
 
-  image: {
-    domains: [process.env.STRAPI_URL],
-    strapi: {
-      baseURL: process.env.STRAPI_URL + '/uploads/',
-    }
-  },
-
   googleFonts: {
     display: 'swap',
     families: {
