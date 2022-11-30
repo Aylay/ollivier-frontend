@@ -122,20 +122,20 @@ let messageDisplay = ref('')
 async function addContact () {
   checkForm()
   if (!error.value) {
-    await $fetch(runtimeConfig.public.apiBase + '/api/contacts', {
-        method: 'POST',
-        body: {
-          data: {
-            prenom: firstName.value,
-            nom: lastName.value,
-            email: email.value,
-            telephone: phone.value,
-            objet: subject.value,
-            message: message.value
-          }
-        }
-    })
     messageDisplay.value = 'Votre message a bien été envoyé !'
+    await $fetch(runtimeConfig.public.apiBase + '/api/contacts', {
+      method: 'POST',
+      body: {
+        data: {
+          prenom: firstName.value,
+          nom: lastName.value,
+          email: email.value,
+          telephone: phone.value,
+          objet: subject.value,
+          message: message.value
+        }
+      }
+    })
   }
 }
 
@@ -354,56 +354,56 @@ function scrollToForm () {
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-14 justify-between">
         <div class="flex flex-col gap-14">
           <div
-            v-for="(img, i) in accueil.bloc5ImagesColonne1"
+            v-for="(img, i) in home.bloc5ImagesColonne1"
             :key="i"
-            :style="'height: ' + img.height + 'px;'"
+            :style="'height: ' + img.hauteur + 'px;'"
             class="max-lg:!h-auto"
           >
             <img
-              :src="img.image.src"
-              :alt="img.image.alt"
+              :src="(runtimeConfig.public.apiBase + img.image.data.attributes.url)"
+              :alt="img.image.data.attributes.alternativeText"
               class="w-full h-full object-cover"
             />
           </div>
         </div>
         <div class="flex flex-col gap-14">
           <div
-            v-for="(img, i) in accueil.bloc5ImagesColonne2"
+            v-for="(img, i) in home.bloc5ImagesColonne2"
             :key="i"
-            :style="'height: ' + img.height + 'px;'"
+            :style="'height: ' + img.hauteur + 'px;'"
             class="max-lg:!h-auto"
           >
             <img
-              :src="img.image.src"
-              :alt="img.image.alt"
+              :src="(runtimeConfig.public.apiBase + img.image.data.attributes.url)"
+              :alt="img.image.data.attributes.alternativeText"
               class="w-full h-full object-cover"
             />
           </div>
         </div>
         <div class="flex flex-col gap-14">
           <div
-            v-for="(img, i) in accueil.bloc5ImagesColonne3"
+            v-for="(img, i) in home.bloc5ImagesColonne3"
             :key="i"
-            :style="'height: ' + img.height + 'px;'"
+            :style="'height: ' + img.hauteur + 'px;'"
             class="max-lg:!h-auto"
           >
             <img
-              :src="img.image.src"
-              :alt="img.image.alt"
+              :src="(runtimeConfig.public.apiBase + img.image.data.attributes.url)"
+              :alt="img.image.data.attributes.alternativeText"
               class="w-full h-full object-cover"
             />
           </div>
         </div>
         <div class="flex flex-col gap-14">
           <div
-            v-for="(img, i) in accueil.bloc5ImagesColonne4"
+            v-for="(img, i) in home.bloc5ImagesColonne4"
             :key="i"
-            :style="'height: ' + img.height + 'px;'"
+            :style="'height: ' + img.hauteur + 'px;'"
             class="max-lg:!h-auto"
           >
             <img
-              :src="img.image.src"
-              :alt="img.image.alt"
+              :src="(runtimeConfig.public.apiBase + img.image.data.attributes.url)"
+              :alt="img.image.data.attributes.alternativeText"
               class="w-full h-full object-cover"
             />
           </div>
