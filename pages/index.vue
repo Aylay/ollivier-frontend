@@ -171,7 +171,6 @@ function scrollToForm () {
           class="h-full w-full object-cover"
           loading="lazy"
           format="webp"
-          provider="strapi"
         />
       </div>
       <div class="max-w-screen-xl w-full mx-auto flex flex-col relative z-10">
