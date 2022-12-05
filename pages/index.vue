@@ -338,7 +338,10 @@ useHead({
       </div>
     </div>
 
-    <div class="px-8 max-w-screen-xl mx-auto flex max-lg:flex-col items-end gap-40 py-40">
+    <div
+      class="px-8 max-w-screen-xl mx-auto flex max-lg:flex-col items-end gap-40 py-40"
+      id="contact-us"
+    >
       <div class="flex-1">
         <h2 class="text-science-blue font-heebo font-bold text-[4rem] leading-[4.8rem]">
           {{ home.bloc7Titre }}
@@ -349,7 +352,6 @@ useHead({
         <form
           class="flex gap-10 flex-col relative"
           @submit.prevent="addContact()"
-          id="contact-us"
         >
           <div class="flex max-lg:flex-col gap-10 justify-between">
             <input
