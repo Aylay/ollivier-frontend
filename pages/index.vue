@@ -66,7 +66,7 @@ useHead({
 
 <template>
   <div>
-    <div class="px-8 h-screen relative flex justify-center items-center">
+    <div class="px-8 max-lg:pt-80 max-lg:pb-40 lg:h-screen relative flex justify-center items-center">
       <div class="absolute w-full h-full inset-0 z-0">
         <img
           :src="(runtimeConfig.public.apiBase + home.imageHeader.data.attributes.url)"

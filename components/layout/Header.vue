@@ -39,7 +39,7 @@ function scrollToForm () {
         <img
           :src="runtimeConfig.public.apiBase + content.logo.data.attributes.url"
           :alt="content.logo.data.attributes.alternativeText"
-          class="h-auto w-full max-w-[16rem] lg:max-w-sm"
+          class="h-auto w-full max-w-[20rem] lg:max-w-md"
         />
       </NuxtLink>
       <div class="flex flex-col gap-4 max-lg:items-center">
