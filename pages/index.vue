@@ -247,7 +247,10 @@ useHead({
       </div>
     </div>
 
-    <div class="py-40 px-8 max-w-screen-xl mx-auto">
+    <div
+      class="py-40 px-8 max-w-screen-xl mx-auto"
+      v-if="home.bloc5ImagesColonne1[0].image.data && home.bloc5ImagesColonne2[0].image.data && home.bloc5ImagesColonne3[0].image.data && home.bloc5ImagesColonne4[0].image.data"
+    >
       <h2 class="text-center text-science-blue font-heebo font-bold text-[4rem] leading-[4.8rem]">
         {{ home.bloc5Titre }}
       </h2>
@@ -337,7 +340,7 @@ useHead({
         </div>
       </div>
     </div>
-
+ 
     <div
       class="px-8 max-w-screen-xl mx-auto flex max-lg:flex-col items-end gap-40 py-40"
       id="contact-us"
