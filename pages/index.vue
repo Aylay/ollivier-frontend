@@ -2,7 +2,7 @@
 import { MapPinIcon, PhoneIcon, EnvelopeIcon, ClockIcon } from '@heroicons/vue/24/outline'
 
 const runtimeConfig = useRuntimeConfig()
-const { find, create } = useStrapi4()
+const { find, create } = useStrapi()
 const nuxtApp = useNuxtApp()
 
 const content = await find<Accueil>("accueil", { populate: 'deep' })

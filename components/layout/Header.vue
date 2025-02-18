@@ -3,7 +3,7 @@ import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/outline'
 
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
-const { find } = useStrapi4()
+const { find } = useStrapi()
 
 const layout = await find<Layout>("layout", { populate: 'deep' });
 const content = layout.data.attributes

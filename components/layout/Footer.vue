@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const runtimeConfig = useRuntimeConfig()
-const { find } = useStrapi4()
+const { find } = useStrapi()
 
 const layout = await find<Layout>("layout", { populate: 'deep' });
 const content = layout.data.attributes

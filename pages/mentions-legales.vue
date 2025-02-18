@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const runtimeConfig = useRuntimeConfig()
-const { find } = useStrapi4()
+const { find } = useStrapi()
 const nuxtApp = useNuxtApp()
 
 const content = await find<Mention>("mention", { populate: 'deep' });
