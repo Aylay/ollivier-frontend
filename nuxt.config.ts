@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({  
+export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/strapi'
   ],
-  
+
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
   },
@@ -61,8 +61,10 @@ export default defineNuxtConfig({
       Heebo: [400, 500]
     }
   },
-  
+
   build: {
     transpile: ['@heroicons/vue']
-  }
+  },
+
+  compatibilityDate: '2025-02-18'
 })
